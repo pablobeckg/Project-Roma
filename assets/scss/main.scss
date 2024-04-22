@@ -1,0 +1,190 @@
+@use "_fonts" as fonts;
+@use "_mixin" as mixins;
+@use "_variables" as variables;
+
+* {
+    @include mixins.defaultSettings;
+}
+
+.background {
+    @include mixins.staticBackground(variables.$background-image);
+    position:fixed;
+    z-index: -1;
+}
+section {
+    nav {
+        @include mixins.navRight;
+        padding: 1rem 4rem 0 0;
+        img {
+            height: 1rem;
+        }
+        h5 {
+            color: white;
+            margin-left: 1rem;
+            font-family: variables.$font-nav;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .intro {
+        width: 20vw;
+        margin: 16vh 0 0vh 8vw;
+        h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20vh;
+        }
+        h2 {
+            font-family: "mrdafoe";
+            color: #E7BC0E;
+            font-size: 2rem;
+        }
+    }
+    .text-one {
+        margin: 35vh 0 0 15vw;
+        width: 31vw;
+        h2 {
+            color: #6BC1A3;
+            @include mixins.textStyle;
+            font-family: variables.$font-text;
+            span {
+                color: white;
+            }
+        }
+    }
+    .stats {
+        font-family: variables.$font-text;
+        color: #E7BC0E;
+        margin-top: 50vh;
+        .container {
+            width: 40vw;
+            margin: 0 auto 0 auto;
+            .stats-one {
+                img {
+                    height: 7.5rem;
+                }
+                h1 {
+                    font-size: 8.5rem;
+                }
+                h2 {
+                    font-size: 2.5rem;
+                    span {
+                        color: white;
+                        background-color: #333333;
+                    }
+                }
+            }
+            .stats-two {
+                margin-top: 30vh;
+                color: #CB91B6;
+                img {
+                    height: 7rem;
+                }
+                h2 {
+                    font-size: 2.5rem;
+                    span {
+                        color: white;
+                        background-color: #333333;
+                    }
+                }
+                h1 {
+                    font-size: 6rem;
+                }
+            }
+            .stats-three {
+                margin-top: 30vh;
+                color: #6BC1A3;
+                img {
+                    height: 7rem;
+                }
+                h2 {
+                    font-size: 2.5rem;
+                    span {
+                        color: white;
+                        background-color: #333333;
+                    }
+                }
+                h1 {
+                    font-size: 6rem;
+                }
+            }
+            .stats-text {
+                margin-top: 30vh;
+                color: #7EB8E1;
+                width: 70%;
+                h1 {
+                    @include mixins.textStyle;
+                    span {
+                        color: white;
+                        background-color: #333333;
+                    }
+                }
+            }
+        }
+    }
+    .kids-see {
+        margin-top: 30vh;
+        height: 130vh;
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
+        div {
+            position: absolute;
+            background-color: rgb(236, 236, 236);
+            width: 100%;
+            height: 100%;
+        }
+        .see {
+            height: 110%;
+            position: absolute;
+            z-index: 1;
+        }
+        .kids {
+            height: 110%;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    footer {
+        background-color: black;
+        height: 100vh;
+        width: 100vw;
+        div {
+            color: white;
+            width: 35%;
+            padding: 20vh 0 0 12vw;
+            h1 {
+                font-family: variables.$font-h1;
+               
+                font-size: 2.5rem;
+            }
+            button {
+                margin-top: 2rem;
+                border: 1px solid white;
+                background-color: black;
+                color: white;
+                padding: 0.8rem;
+                &:hover {
+                    box-shadow: 8px 8px 0px rgb(255, 255, 255);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.nav-bottom {
+    background-color: black;
+    padding-bottom: 1rem;
+    h5 {
+        color: white;
+        text-align: center;
+        font-family: variables.$font-nav;
+        a {
+            color: #6BC1A3;
+            text-decoration: none;
+        }
+    }
+}
+
+// border: variables.$border-red;
